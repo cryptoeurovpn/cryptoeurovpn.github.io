@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="latin-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Crypto Euro VPN">
+    <link rel="shortcut icon" href="../static/images/app.ico" />
+    <link rel="stylesheet" href="main.css">
+    <title>CryptoEuroVPN</title></head>
+<body>
+<header>
+    <h2><span>Meet the most innovative European startup</span></h2>
+</header>
+<section class="tablinks">
+    <script>
+        function openPage(pageName, elmnt) {
+            // Hide all elements with class="tabcontent" by default */
+            let i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Remove the background color of all tablinks/buttons
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                if (elmnt !== tablinks[i]) {
+                    tablinks[i].style.backgroundColor = "";
+                } else {
+                    tablinks[i].style.backgroundColor = "#86d1d0";
+                }
+
+            }
+
+            document.getElementById(pageName).style.display = "block";
+        }
+    </script>
+    <button class="tablink" onclick="openPage('left-tab', this)" id="defaultOpen">Product</button>
+    <button class="tablink" onclick="openPage('middle-tab', this)">Team</button>
+    <button class="tablink" onclick="openPage('right-tab', this)">Mission</button>
+    <button class="tablink" onclick="openPage('right2-tab', this)">About</button>
+</section>
+<section class="upper">
+    <div id="left-tab" class="tabcontent">
+
+    </div>
+    <div id="middle-tab" class="tabcontent">
+        <script type="text/javascript">
+            function copy(elementId) {
+                // Get the text field
+                let copyText = document.getElementById(elementId).getElementsByTagName("span")[0];
+
+                navigator.clipboard.writeText(copyText.innerText);
+
+                // Alert the copied text
+                alert("Copied: " + copyText.innerText);
+            }
+        </script>
+        <p>Click to copy text</p>
+        <ul class="not-list">
+            <li id="cryptoNano">
+                <button class="copySpanOnClick" onclick="copy(this.parentNode.id)">TextToCopy</button>
+                <span>TextToCopy</span></li>
+
+            <li id="cryptoETC">
+                <button class="copySpanOnClick" onclick="copy(this.parentNode.id)">TextToCopy</button>
+                <span>TextToCopy</span></li>
+
+            <li id="cryptoRVN">
+                <button class="copySpanOnClick" onclick="copy(this.parentNode.id)">TextToCopy</button>
+                <span>TextToCopy</span></li>
+
+            <li id="cryptoETH">
+                <button class="copySpanOnClick" onclick="copy(this.parentNode.id)">TextToCopy</button>
+                <span>TextToCopy</span></li>
+
+            <li id="cryptoBTC">
+                <button class="copySpanOnClick" onclick="copy(this.parentNode.id)">TextToCopy</button>
+                <span>TextToCopy</span></li>
+
+            <li id="cryptoAE">
+                <button class="copySpanOnClick" onclick="copy(this.parentNode.id)">TextToCopy</button>
+                <span>TextToCopy</span></li>
+        </ul>
+    </div>
+    <div id="right-tab" class="tabcontent">
+        <div id="mission">
+            test
+        </div>
+    </div>
+    <div id="right2-tab" class="tabcontent">
+        <h5>Information</h5>
+        <ul>
+            <li>Crypto Euro VPN</li>
+            <li>eurovpn@skiff.com</li>
+            <li><a href="https://www.linkedin.com/company/eurovpn/">LinkedIn Company Page</a></li>
+        </ul>
+
+        <h5>Roadmap</h5>
+        <ul>
+            <li>
+                <s>Add EU servers support</s>
+            </li>
+            <li>
+                <s>Implement BTC payment processing</s>
+            </li>
+            <li>
+                Add USDT payment processing
+            </li>
+            <li>
+                Add multiple protocols support
+        </ul>
+    </div>
+    <script>document.getElementById("defaultOpen").click();</script>
+</section>
+
+
+<section class="lower">
+    <div class="advertisement">
+        PROMOTION TEXT
+    </div>
+</section>
+
+<section class="author">
+    &copy; Crypto Euro VPN | 2023–2024
+</section>
+</body>
+</html>
