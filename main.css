@@ -11,7 +11,7 @@ CSS File for the project
 @media (prefers-color-scheme: dark) {
 
     html {
-        background: url(../static/images/background_dark.svg) no-repeat center center fixed;
+        background-image: linear-gradient(to left, #475a8f, #42a19a);
         backdrop-filter: blur(20px);
     }
 
@@ -19,23 +19,33 @@ CSS File for the project
         color: white;
     }
 
-    #privacy {
-        background-color: #5e8f89;
-    }
-
-    .advertisement {
+    .advertisement, #privacy {
         background-color: #1e8276;
     }
 
     #upload-button {
         color-scheme: dark;
     }
+
+    .button-17 {
+        background: #1e4b66;
+        color: white;
+    }
+
+    .button-17:hover {
+        background: #1e4d66;
+        color: whitesmoke;
+    }
+
+    .company-values-ulist-item{
+        background-image: linear-gradient(to right, #fabeb1, #bbf0e3);
+    }
 }
 
 @media (prefers-color-scheme: light) {
 
     html {
-        background: url(../static/images/background_light.svg) no-repeat center center fixed;
+        background-image: linear-gradient(to left, #8ee8e2, #f7ba7c);
         backdrop-filter: blur(20px);
     }
 
@@ -50,6 +60,20 @@ CSS File for the project
     #privacy {
 
         background-color: #fff;
+    }
+
+    .button-17 {
+        background-image: linear-gradient(to left, #f7ba7c, #8ee8e2);
+        color: #11211f;
+    }
+
+    .button-17:hover {
+        background: #fcd4ac;
+        color: #11211f;
+    }
+
+    .company-values-ulist-item{
+        background-image: linear-gradient(to right, #2b4361, #1e543f);
     }
 }
 
@@ -67,6 +91,10 @@ body {
     min-width: 200px;
     margin-bottom: 60px;
     clear: both;
+}
+
+a:visited {
+    color: inherit
 }
 
 .advertisement {
@@ -112,6 +140,7 @@ header {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+
     width: auto !important;
     height: auto;
     float: top;
@@ -121,6 +150,10 @@ header {
     text-transform: uppercase;
     font-weight: 1000;
     color: #11211f;
+}
+
+.upper {
+    margin-top: 8.6vh;
 }
 
 header h2 span {
@@ -133,8 +166,8 @@ header h2 span {
 
 .tablink, #middle-tab .not-list button {
     display: inline-flex;
-    background-color: #96e3d6;
-    color: #000000;
+    background-color: #a6e3d9;
+    color: #11211f;
     float: left;
     justify-content: center;
     border: none;
@@ -149,12 +182,13 @@ header h2 span {
 .pure-text {
     padding: 2.6vh;
     font-size: 2.6hf;
-    font-weight: 500
+    font-weight: 500;
+    color: #11211f;
 }
 
 .tablink:hover, #middle-tab .not-list button:hover {
     background-color: #86d1d0;
-    color: #0005;
+    color: black;
 }
 
 .tabcontent {
@@ -190,19 +224,17 @@ header h2 span {
 .button-17 {
     align-items: center;
     appearance: none;
-    background-color: #16a8a6;
     border-radius: 24px;
     border-style: none;
     box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
     box-sizing: border-box;
-    color: #fff;
     cursor: pointer;
     display: inline-flex;
     fill: currentcolor;
     margin-top: 4px;
     font-size: 2vh;
     height: 48px;
-    width: 200px;
+
     justify-content: center;
     letter-spacing: 1px;
     line-height: normal;
@@ -218,23 +250,6 @@ header h2 span {
     touch-action: manipulation;
     will-change: transform, opacity;
     z-index: 0;
-}
-
-.ulist {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#company-values-ulist > * {
-    display: table;
-    column-count: 1;
-}
-
-.button-17:hover {
-    background: #128785;
-    color: #fff8;
 }
 
 .button-17:active {
@@ -329,4 +344,22 @@ header h2 span {
 
 ul {
     list-style-type: none;
+}
+
+.ulist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.company-values-ulist-item{
+    padding: 0;
+    margin: 1vh;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    -webkit-background-clip: text;
+    color: transparent;
 }
