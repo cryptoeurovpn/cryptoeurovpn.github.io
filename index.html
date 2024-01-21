@@ -37,11 +37,29 @@
     </script>
     <button class="tablink" onclick="openPage('left-tab', this)" id="defaultOpen">Product</button>
     <button class="tablink" onclick="openPage('middle-tab', this)">Team</button>
-    <button class="tablink" onclick="openPage('right-tab', this)">Mission</button>
+    <button class="tablink" onclick="openPage('right-tab', this)">Privacy</button>
     <button class="tablink" onclick="openPage('right2-tab', this)">About</button>
 </section>
 <section class="upper">
     <div id="left-tab" class="tabcontent">
+        <p class="pure-text">
+            Our main product  as of today is a VPN service, upon subscription to which the user has access to
+            an anonymous high-speed connection with one of our servers in EU using the Wireguard protocol.
+            The key feature of this service is payment processing 100% in cryptocurrency (BTC – Bitcoin),
+            which is fully consistent with our mission and values: we strive to provide every Internet user
+            with complete freedom of information, focusing on
+        </p>
+        <ul class="ulist" id="company-values-ulist">
+            <li class="tablink">
+                Privacy
+            </li>
+            <li class="tablink">
+                DeFi
+            </li>
+            <li class="tablink">
+                Anonymity
+            </li>
+        </ul>
 
     </div>
     <div id="middle-tab" class="tabcontent">
@@ -56,36 +74,35 @@
                 alert("Copied: " + copyText.innerText);
             }
         </script>
-        <p>Click to copy text</p>
+
         <ul class="not-list">
-            <li id="cryptoNano">
-                <button class="copySpanOnClick" onclick="copy(this.parentNode.id)">TextToCopy</button>
-                <span>TextToCopy</span></li>
 
-            <li id="cryptoETC">
-                <button class="copySpanOnClick" onclick="copy(this.parentNode.id)">TextToCopy</button>
-                <span>TextToCopy</span></li>
+            <li id="ceo">
+                <button class="copySpanOnClick">CEO / CTO<br>
+                    Eugene von Steyn
+                </button>
+                <span>Chief Technology Officer</span></li>
 
-            <li id="cryptoRVN">
-                <button class="copySpanOnClick" onclick="copy(this.parentNode.id)">TextToCopy</button>
-                <span>TextToCopy</span></li>
+            <li id="coo">
+                <button class="copySpanOnClick">COO<br>
+                    Lisa von Trier
+                </button>
+                <span>Chief Operations Officer</span></li>
 
-            <li id="cryptoETH">
-                <button class="copySpanOnClick" onclick="copy(this.parentNode.id)">TextToCopy</button>
-                <span>TextToCopy</span></li>
-
-            <li id="cryptoBTC">
-                <button class="copySpanOnClick" onclick="copy(this.parentNode.id)">TextToCopy</button>
-                <span>TextToCopy</span></li>
-
-            <li id="cryptoAE">
-                <button class="copySpanOnClick" onclick="copy(this.parentNode.id)">TextToCopy</button>
-                <span>TextToCopy</span></li>
+            <li id="leaddev">
+                <button class="copySpanOnClick">Lead Software Engineer<br>
+                    Stan Ermokhin
+                </button>
+                <span>Lead Software Engineer</span></li>
         </ul>
     </div>
     <div id="right-tab" class="tabcontent">
-        <div id="mission">
-            test
+        <div id="privacy">
+            Our VPN service is fully committed to protecting user data and maintaining user confidentiality:
+            no traffic, timestamp, DNS, bandwidth, or IP logging. Only user count, offline/online status
+            and subscription status are available to our administrators and support agents.
+
+            We are fully GDPR-5 compliant at the moment of subscription.
         </div>
     </div>
     <div id="right2-tab" class="tabcontent">
@@ -96,7 +113,7 @@
             <li><a href="https://www.linkedin.com/company/eurovpn/">LinkedIn Company Page</a></li>
         </ul>
 
-        <h5>Roadmap</h5>
+        <h5>Roadmap 2023-2024</h5>
         <ul>
             <li>
                 <s>Add EU servers support</s>
@@ -110,6 +127,12 @@
             <li>
                 Add multiple protocols support
         </ul>
+
+        <h5>Roadmap 2025</h5>
+        <ul>
+            <li>iOS app</li>
+            <li>Team extension</li>
+        </ul>
     </div>
     <script>document.getElementById("defaultOpen").click();</script>
 </section>
@@ -117,7 +140,7 @@
 
 <section class="lower">
     <div class="advertisement">
-        PROMOTION TEXT
+        Join our VPN service bot on Telegram: @CryptoEuroVPNbot
     </div>
 </section>
 

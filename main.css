@@ -19,7 +19,7 @@ CSS File for the project
         color: white;
     }
 
-    #mission {
+    #privacy {
         background-color: #5e8f89;
     }
 
@@ -39,7 +39,7 @@ CSS File for the project
         backdrop-filter: blur(20px);
     }
 
-    .advertisement, #mission {
+    .advertisement, #privacy {
         background-color: whitesmoke;
     }
 
@@ -47,7 +47,7 @@ CSS File for the project
         color-scheme: normal;
     }
 
-    #mission {
+    #privacy {
 
         background-color: #fff;
     }
@@ -142,8 +142,14 @@ header h2 span {
     cursor: pointer;
     padding: 3vh;
     font-size: 2.6vh;
-    font-weight: 100;
+    font-weight: 200;
     width: 25%; /* = 100% divided by number of tabs  */
+}
+
+.pure-text {
+    padding: 2.6vh;
+    font-size: 2.6hf;
+    font-weight: 500
 }
 
 .tablink:hover, #middle-tab .not-list button:hover {
@@ -214,6 +220,18 @@ header h2 span {
     z-index: 0;
 }
 
+.ulist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#company-values-ulist > * {
+    display: table;
+    column-count: 1;
+}
+
 .button-17:hover {
     background: #128785;
     color: #fff8;
@@ -280,33 +298,32 @@ header h2 span {
 }
 
 #middle-tab {
-    width: 80%;
+    width: 50%;
 }
 
 #middle-tab .not-list {
     display: table;
-    column-count: 2;
+    column-count: 1;
     width: 100%;
 }
 
 #middle-tab .not-list button {
-    width: 50%; /* = 100% divided by number of columns */
+    width: 100%; /* = 100% divided by number of columns */
 }
-
 #middle-tab .not-list span {
     display: none !important;
 }
 
-#mission {
+#privacy {
     justify-content: inherit;
     text-align: inherit;
-    margin: 1vh 3vh 1vh 3vh;
-    padding: 3vh 3vh 1vh 3vh;
+    margin: 1vh 1vh 1vh 1vh;
+    padding: 3vh 3vh 3vh 3vh;
     border-radius: 24px;
     font-size: 2vh;
 }
 
-#mission ul {
+#privacy ul {
     list-style-type: square;
 }
 
