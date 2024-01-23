@@ -4,14 +4,49 @@ CSS File for the project
 
 */
 
-* {
-    font-family: "Avenir Next", sans-serif;
+@font-face {
+    font-family: "Daz Handwriting";
+    src: url("./fonts/DazHandwriting/DazHandwritingRegular.eot");
+    src: url("./fonts/DazHandwriting/DazHandwritingRegular.eot?#iefix") format("embedded-opentype"),
+        url("./fonts/DazHandwriting/DazHandwritingRegular.woff2") format("woff2"),
+        url("./fonts/DazHandwriting/DazHandwritingRegular.woff") format("woff"),
+        url("./fonts/DazHandwriting/DazHandwritingRegular.ttf") format("truetype"),
+        url("./fonts/DazHandwriting/DazHandwritingRegular.svg#DazHandwritingRegular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Larabie";
+    src: url("./fonts/Larabie/LarabiefontRg-Regular.eot");
+    src: url("./fonts/Larabie/LarabiefontRg-Regular.eot?#iefix") format("embedded-opentype"),
+        url("./fonts/Larabie/LarabiefontRg-Regular.woff2") format("woff2"),
+        url("./fonts/Larabie/LarabiefontRg-Regular.woff") format("woff"),
+        url("./fonts/Larabie/LarabiefontRg-Regular.ttf") format("truetype"),
+        url("./fonts/Larabie/LarabiefontRg-Regular.svg#LarabiefontRg-Regular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Modestic Sans";
+    src: url("./fonts/ModesticSans/ModesticSans-Bold.eot");
+    src: url("./fonts/ModesticSans/ModesticSans-Bold.eot?#iefix") format("embedded-opentype"),
+        url("./fonts/ModesticSans/ModesticSans-Bold.woff2") format("woff2"),
+        url("./fonts/ModesticSans/ModesticSans-Bold.woff") format("woff"),
+        url("./fonts/ModesticSans/ModesticSans-Bold.ttf") format("truetype"),
+        url("./fonts/ModesticSans/ModesticSans-Bold.svg#ModesticSans-Bold") format("svg");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
 
 @media (prefers-color-scheme: dark) {
 
     html {
-        background-image: linear-gradient(to left, #475a8f, #42a19a);
+        background-image: linear-gradient(to right, #6e93d4, #1c2b70);
         backdrop-filter: blur(20px);
     }
 
@@ -20,20 +55,29 @@ CSS File for the project
     }
 
     .advertisement, #privacy {
-        background-color: #1e8276;
+        background-color: #354869;
     }
 
     #upload-button {
         color-scheme: dark;
     }
 
+    .tablink, #middle-tab .not-list button {
+        background-color: #9fa8f5;
+    }
+
+    .tablink:hover, #middle-tab .not-list button:hover {
+        background-color: #7e86cf;
+        color: #11211f;
+    }
+
     .button-17 {
-        background: #1e4b66;
+        background: #354869;
         color: white;
     }
 
     .button-17:hover {
-        background: #1e4d66;
+        background: #354869;
         color: whitesmoke;
     }
 
@@ -57,6 +101,15 @@ CSS File for the project
         color-scheme: normal;
     }
 
+    .tablink, #middle-tab .not-list button {
+        background-color: #a6e3d9;
+    }
+
+    .tablink:hover, #middle-tab .not-list button:hover {
+        background-color: #86d1d0;
+        color: #11211f;
+    }
+
     #privacy {
 
         background-color: #fff;
@@ -77,6 +130,10 @@ CSS File for the project
     }
 }
 
+* {
+    font-family: "Larabie", monospace;
+}
+
 html, body {
     margin: 0;
 }
@@ -91,6 +148,12 @@ body {
     min-width: 200px;
     margin-bottom: 60px;
     clear: both;
+}
+
+.mission {
+    font-family: "Modestic Sans", sans-serif;
+    font-weight: 500;
+    margin: 4vh;
 }
 
 a:visited {
@@ -108,7 +171,6 @@ a:visited {
     padding: 0;
 
     align-items: center;
-    font-family: "Avenir Next Condensed", sans-serif;
     display: inline-flex;
 }
 
@@ -136,7 +198,8 @@ div, header {
 }
 
 header {
-    background: url("../static/images/bubbles.svg") no-repeat center center;
+    background: url("./images/bubbles.svg") no-repeat center center;
+    background-blend-mode: luminosity;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -156,8 +219,8 @@ header {
     margin-top: 8.6vh;
 }
 
-header h2 span {
-    font-family: "Arial Black", sans-serif;
+header h2 span, .advertisement {
+    font-family: "Modestic Sans", sans-serif;
 }
 
 .tablinks {
@@ -166,8 +229,8 @@ header h2 span {
 
 .tablink, #middle-tab .not-list button {
     display: inline-flex;
-    background-color: #a6e3d9;
-    color: #11211f;
+
+    color: black;
     float: left;
     justify-content: center;
     border: none;
@@ -179,16 +242,17 @@ header h2 span {
     width: 25%; /* = 100% divided by number of tabs  */
 }
 
+.team-members > li > button {
+    font-family: "Daz Handwriting", sans-serif;
+    font-weight: 100 !important;
+    color: #11211f !important;
+}
+
 .pure-text {
     padding: 2.6vh;
     font-size: 2.6hf;
     font-weight: 500;
     color: #11211f;
-}
-
-.tablink:hover, #middle-tab .not-list button:hover {
-    background-color: #86d1d0;
-    color: black;
 }
 
 .tabcontent {
@@ -325,6 +389,7 @@ header h2 span {
 #middle-tab .not-list button {
     width: 100%; /* = 100% divided by number of columns */
 }
+
 #middle-tab .not-list span {
     display: none !important;
 }
@@ -353,13 +418,16 @@ ul {
     justify-content: center;
 }
 
-.company-values-ulist-item{
-    padding: 0;
-    margin: 1vh;
+.ulist > a {
+    text-decoration: none !important;
+}
 
+.company-values-ulist-item {
+    padding: 0;
+    margin: 0.5vh;
     text-align: center;
     text-transform: uppercase;
-    font-weight: 700;
+    font-family: "Arial Black", sans-serif;
     -webkit-background-clip: text;
     color: transparent;
 }
