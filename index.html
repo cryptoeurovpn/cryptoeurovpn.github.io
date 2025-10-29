@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="latin-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Crypto Networks VPN">
+    <meta name="google-site-verification" content="xa3f2ZRd-6FQVwJEDOgG2lp2S8Az3QcqYAxQ2H0bs8w" />
+    <link rel="shortcut icon" href="./static/images/crypto_networks.jpg" />
+    <link rel="stylesheet" href="static/main.css">
+    <title>CryptoEuroVPN</title></head>
+<body>
+<header>
+    <h2><span>Meet the most innovative European startup</span></h2>
+</header>
+<section class="tablinks">
+    <script>
+        function openPage(pageName, elmnt) {
+            // Hide all elements with class="tabcontent" by default */
+            let i, tabcontent, tablinks;
+            const colorLight = "#86d1d0";
+            const colorDark = "#7e86cf";
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Remove the background color of all tablinks/buttons
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                if (elmnt !== tablinks[i]) {
+                    tablinks[i].style.backgroundColor = "";
+                } else {
+                    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                        tablinks[i].style.backgroundColor = colorDark;
+                    } else {
+                        tablinks[i].style.backgroundColor = colorLight;
+                    }
+                }
+
+            }
+
+            document.getElementById(pageName).style.display = "block";
+        }
+    </script>
+    <button class="tablink" onclick="openPage('left-tab', this)" id="defaultOpen">Product</button>
+    <button class="tablink" onclick="openPage('middle-tab', this)">Team</button>
+    <button class="tablink" onclick="openPage('right-tab', this)">Privacy</button>
+    <button class="tablink" onclick="openPage('right2-tab', this)">About</button>
+</section>
+<section class="upper">
+    <div id="left-tab" class="tabcontent">
+        <a href="https://t.me/cryptonetworksbot">
+            <button class="button-17">
+                Subscribe on Telegram
+            </button>
+        </a>
+        <div>
+            <p>Our product is a VPN service that allows users to establish
+            an anonymous high-speed connection through one of our servers in EU using the VLESS/Reality protocol.
+            The service's key feature is payments processing in a cryptocurrency of your choice (though we encourage the use of XMR – Monero),
+            which is fully consistent with our mission:</p>
+            <blockquote class="mission">
+                We strive to provide every Internet user
+                with complete freedom of information
+            </blockquote>
+
+            <p>In doing so, we are guided by the following values:</p>
+            <div class="ulist" id="company-values-ulist">
+                <a href="https://en.wikipedia.org/wiki/Privacy">
+                    <p class="company-values-ulist-item">Privacy</p>
+                </a>
+                <a href="https://en.wikipedia.org/wiki/Decentralized_finance">
+                    <p class="company-values-ulist-item">DeFi</p>
+                </a>
+                <a href="https://en.wikipedia.org/wiki/Anonymity">
+                    <p class="company-values-ulist-item">Anonymity</p>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <div id="middle-tab" class="tabcontent">
+        <script type="text/javascript">
+            function copy(elementId) {
+                // Get the text field
+                let copyText = document.getElementById(elementId).getElementsByTagName("span")[0];
+
+                navigator.clipboard.writeText(copyText.innerText);
+
+                // Alert the copied text
+                alert("Copied: " + copyText.innerText);
+            }
+        </script>
+
+        <ul class="not-list team-members">
+
+            <li id="ceo">
+                <button>CEO / CTO<br>
+                    Eugene von Stein
+                </button>
+                <span>Chief Technology Officer</span>
+            </li>
+
+            <li id="coo">
+                <button>COO<br>
+                    Lisa von Trier
+                </button>
+                <span>Chief Operations Officer</span>
+            </li>
+
+            <li id="leaddev">
+                <button>Senior Developer<br>
+                    Sten Alekssen
+                </button>
+                <span>Senior Developer</span>
+            </li>
+        </ul>
+    </div>
+    <div id="right-tab" class="tabcontent">
+        <div id="privacy">
+            Our VPN service is fully committed to protecting user data and maintaining user confidentiality:
+            no traffic, timestamp, DNS, bandwidth, or IP logging. Only user count, offline/online status
+            and subscription status are available to our administrators and support agents.
+        </div>
+    </div>
+    <div id="right2-tab" class="tabcontent">
+        <h5>Information</h5>
+        <ul>
+            <li>Crypto Euro VPN, est. 2023</li>
+            <li>eugene.von.stein@outlook.com</li>
+        </ul>
+
+        <h5>Roadmap 2023-2024</h5>
+        <ul>
+            <li>
+                <s>Add EU servers support</s>
+            </li>
+            <li>
+                <s>Implement XMR payment processing</s>
+            </li>
+            <li>
+                Add USDT payment processing
+            </li>
+            <li>
+                Add multiple protocols support
+        </ul>
+
+        <h5>Roadmap 2025-2026</h5>
+        <ul>
+            <li>Team extension</li>
+        </ul>
+
+        <h5>Abbreviations & definitions</h5>
+        <ul>
+            <li>VPN — Virtual private network</li>
+            <li>EU — European Union</li>
+            <li>DeFi — Decentralized finance<br>(linked to Wiki article)</li>
+        </ul>
+    </div>
+    <script>document.getElementById("defaultOpen").click();</script>
+</section>
+
+
+<section class="lower">
+    <div class="advertisement">
+        SHARE WITH FRIENDS
+    </div>
+</section>
+
+<section class="author">
+    &copy; Crypto Networks VPN | 2023–2025
+</section>
+</body>
+</html>
