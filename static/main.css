@@ -1,0 +1,433 @@
+/*
+
+CSS File for the project
+
+*/
+
+@font-face {
+    font-family: "Daz Handwriting";
+    src: url("./fonts/DazHandwriting/DazHandwritingRegular.eot");
+    src: url("./fonts/DazHandwriting/DazHandwritingRegular.eot?#iefix") format("embedded-opentype"),
+        url("./fonts/DazHandwriting/DazHandwritingRegular.woff2") format("woff2"),
+        url("./fonts/DazHandwriting/DazHandwritingRegular.woff") format("woff"),
+        url("./fonts/DazHandwriting/DazHandwritingRegular.ttf") format("truetype"),
+        url("./fonts/DazHandwriting/DazHandwritingRegular.svg#DazHandwritingRegular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Larabie";
+    src: url("./fonts/Larabie/LarabiefontRg-Regular.eot");
+    src: url("./fonts/Larabie/LarabiefontRg-Regular.eot?#iefix") format("embedded-opentype"),
+        url("./fonts/Larabie/LarabiefontRg-Regular.woff2") format("woff2"),
+        url("./fonts/Larabie/LarabiefontRg-Regular.woff") format("woff"),
+        url("./fonts/Larabie/LarabiefontRg-Regular.ttf") format("truetype"),
+        url("./fonts/Larabie/LarabiefontRg-Regular.svg#LarabiefontRg-Regular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Modestic Sans";
+    src: url("./fonts/ModesticSans/ModesticSans-Bold.eot");
+    src: url("./fonts/ModesticSans/ModesticSans-Bold.eot?#iefix") format("embedded-opentype"),
+        url("./fonts/ModesticSans/ModesticSans-Bold.woff2") format("woff2"),
+        url("./fonts/ModesticSans/ModesticSans-Bold.woff") format("woff"),
+        url("./fonts/ModesticSans/ModesticSans-Bold.ttf") format("truetype"),
+        url("./fonts/ModesticSans/ModesticSans-Bold.svg#ModesticSans-Bold") format("svg");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    html {
+        background-image: linear-gradient(to right, #6e93d4, #1c2b70);
+        backdrop-filter: blur(20px);
+    }
+
+    div, .author, .advertisement {
+        color: white;
+    }
+
+    .advertisement, #privacy {
+        background-color: #354869;
+    }
+
+    #upload-button {
+        color-scheme: dark;
+    }
+
+    .tablink, #middle-tab .not-list button {
+        background-color: #9fa8f5;
+    }
+
+    .tablink:hover, #middle-tab .not-list button:hover {
+        background-color: #7e86cf;
+        color: #11211f;
+    }
+
+    .button-17 {
+        background: #354869;
+        color: #eeeeee;
+    }
+
+    .button-17:hover {
+        background: #354869;
+        color: #efefef;
+    }
+
+    .company-values-ulist-item{
+        background-image: linear-gradient(to right, #fabeb1, #bbf0e3);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+
+    html {
+        background-image: linear-gradient(to left, #8ee8e2, #f7ba7c);
+        backdrop-filter: blur(20px);
+    }
+
+    .advertisement, #privacy {
+        background-color: #efefef;
+    }
+
+    #upload-button {
+        color-scheme: normal;
+    }
+
+    .tablink, #middle-tab .not-list button {
+        background-color: #a6e3d9;
+    }
+
+    .tablink:hover, #middle-tab .not-list button:hover {
+        background-color: #86d1d0;
+        color: #11211f;
+    }
+
+    #privacy {
+
+        background-color: #fff;
+    }
+
+    .button-17 {
+        background-image: linear-gradient(to left, #f7ba7c, #8ee8e2);
+        color: #11211f;
+    }
+
+    .button-17:hover {
+        background: #fcd4ac;
+        color: #11211f;
+    }
+
+    .company-values-ulist-item{
+        background-image: linear-gradient(to right, #2b4361, #1e543f);
+    }
+}
+
+* {
+    font-family: "Larabie", monospace;
+}
+
+html, body {
+    margin: 0;
+}
+
+html {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+body {
+    min-width: 200px;
+    margin-bottom: 60px;
+    clear: both;
+}
+
+.mission {
+    font-family: "Modestic Sans", sans-serif;
+    font-weight: 500;
+    margin: 4vh;
+}
+
+a:visited {
+    color: inherit
+}
+
+.advertisement {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    width: 100%;
+    height: 8%;
+    padding: 0;
+
+    align-items: center;
+    display: inline-flex;
+}
+
+img {
+    float: top;
+    width: fit-content;
+    height: auto;
+    max-width: 200px;
+    margin: 0;
+    padding: 0;
+}
+
+#serverMsg {
+    padding: 0;
+}
+
+div, header {
+    padding: 15px;
+    text-align: center;
+    text-align-all: match-parent;
+    font-size: 2.5vh;
+    margin: auto;
+    width: auto;
+    justify-content: center;
+}
+
+header {
+    background: url("./images/bubbles.svg") no-repeat center center;
+    background-blend-mode: luminosity;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+
+    width: auto !important;
+    height: auto;
+    float: top;
+    justify-self: start;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 1000;
+    color: #11211f;
+}
+
+.upper {
+    margin-top: 8.6vh;
+}
+
+header h2 span, .advertisement {
+    font-family: "Modestic Sans", sans-serif;
+}
+
+.tablinks {
+    margin-bottom: 8.6vh; /* = padding*2 + font-size */
+}
+
+.tablink, #middle-tab .not-list button {
+    display: inline-flex;
+
+    color: black;
+    float: left;
+    justify-content: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 3vh;
+    font-size: 2.6vh;
+    font-weight: 200;
+    width: 25%; /* = 100% divided by number of tabs  */
+}
+
+.team-members > li > button {
+    font-family: "Daz Handwriting", sans-serif;
+    font-weight: 100 !important;
+    color: #11211f !important;
+}
+
+.pure-text {
+    padding: 2.6vh;
+    font-size: 2.6hf;
+    font-weight: 500;
+    color: #11211f;
+}
+
+.tabcontent {
+    display: none;
+    height: 100%;
+    margin: auto;
+    justify-content: flex-end;
+}
+
+.author {
+    margin: auto;
+    width: fit-content;
+    padding: 2.5vh 2.5vh;
+    font-size: 1.8vh;
+    font-weight: 100;
+}
+
+#input {
+    align-items: center;
+    width: auto;
+    height: fit-content;
+}
+
+#output {
+    height: auto;
+    max-width: 80%;
+}
+
+#upload-button {
+    width: fit-content;
+}
+
+.button-17 {
+    align-items: center;
+    appearance: none;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    margin-top: 4px;
+    font-size: 2vh;
+    height: 48px;
+
+    justify-content: center;
+    letter-spacing: 1px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 2px 24px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1), opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform, opacity;
+    z-index: 0;
+}
+
+.button-17:active {
+    box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+    outline: none;
+}
+
+.button-17:focus {
+    outline: none;
+}
+
+.button-17:not(:disabled) {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):hover {
+    box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+.button-17:not(:disabled):focus {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):active {
+    box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+}
+
+.button-17:disabled {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+#file-input {
+    padding: inherit;
+    width: max-content;
+}
+
+#right-tab {
+    justify-content: left;
+    text-align: left;
+}
+
+#middle-tab .not-list {
+    list-style-type: none;
+}
+
+#right2-tab {
+    display: inline-grid;
+}
+
+#right2-tab, #middle-tab > .not-list {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#right2-tab ol, #right2-tab ul {
+    padding-left: 2px !important;
+}
+
+#about {
+    margin-inside: 1vh !important;
+}
+
+#middle-tab {
+    width: 50%;
+}
+
+#middle-tab .not-list {
+    display: table;
+    column-count: 1;
+    width: 100%;
+}
+
+#middle-tab .not-list button {
+    width: 100%; /* = 100% divided by number of columns */
+}
+
+#middle-tab .not-list span {
+    display: none !important;
+}
+
+#privacy {
+    justify-content: inherit;
+    text-align: inherit;
+    margin: 1vh 1vh 1vh 1vh;
+    padding: 3vh 3vh 3vh 3vh;
+    border-radius: 24px;
+    font-size: 2vh;
+}
+
+#privacy ul {
+    list-style-type: square;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.ulist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ulist > a {
+    text-decoration: none !important;
+}
+
+.company-values-ulist-item {
+    padding: 0;
+    margin: 0.5vh;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Modestic Sans", sans-serif;
+    -webkit-background-clip: text;
+    color: transparent;
+}
