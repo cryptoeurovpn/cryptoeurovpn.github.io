@@ -201,7 +201,7 @@ header {
 
 /* Team Section */
 
-#middle-tab .team-members button {
+.team-members button {
     background: rgba(255,255,255,0.06);
     border: 1px solid rgba(255,255,255,0.12);
     border-radius: 12px;
@@ -214,7 +214,7 @@ span {
     font-family: "Daz Handwriting", sans-serif;
 }
 
-#middle-tab .team-members button:hover {
+.team-members button:hover {
     background: linear-gradient(90deg, rgba(0,255,170,0.1), rgba(255,0,170,0.1));
 }
 
@@ -242,4 +242,37 @@ a:hover {
 
 a:hover, .ulist  {
     opacity: 1 !important;
+}
+
+/* Center the table on the page */
+.prices-table {
+    margin: 40px auto;
+    width: 80%;
+    max-width: 600px;
+    border-collapse: collapse;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Table header style */
+.prices-table thead {
+    color: #fff;
+    font-size: 18px;
+    padding: 12px;
+}
+
+/* Regular cells */
+.prices-table th,
+.prices-table td {
+    padding: 15px;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+/* Header row inside tbody */
+.prices-table tbody th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    color: #333;
 }

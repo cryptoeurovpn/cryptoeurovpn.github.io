@@ -59,10 +59,10 @@
             document.getElementById(pageName).style.display = "inherit";
         }
     </script>
-    <button class="tablink" onclick="openPage('left-tab', this)" id="defaultOpen">Service</button>
-    <button class="tablink" onclick="openPage('middle-tab', this)">Team</button>
+    <button class="tablink" onclick="openPage('left-tab', this)" id="defaultOpen">About</button>
+    <button class="tablink" onclick="openPage('middle1-tab', this)">Pricing</button>
+    <button class="tablink" onclick="openPage('middle2-tab', this)">Company</button>
     <button class="tablink" onclick="openPage('right-tab', this)">Privacy</button>
-    <button class="tablink" onclick="openPage('right2-tab', this)">About</button>
 </section>
 <section class="upper">
     <div id="left-tab" class="tabcontent">
@@ -106,18 +106,33 @@
         </div>
 
     </div>
-    <div id="middle-tab" class="tabcontent">
-        <script type="text/javascript">
-            function copy(elementId) {
-                // Get the text field
-                let copyText = document.getElementById(elementId).getElementsByTagName("span")[0];
-
-                navigator.clipboard.writeText(copyText.innerText);
-
-                // Alert the copied text
-                alert("Copied: " + copyText.innerText);
-            }
-        </script>
+    <div id="middle1-tab" class="tabcontent">
+        <table class="prices-table">
+            <thead class="table-title">
+            Current price ranges (not final offer)
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Plan</th>
+                    <th>Range</th>
+                </tr>
+                <tr>
+                    <td>1 Month</td>
+                    <td>from € 12</td>
+                </tr>
+                <tr>
+                    <td>3 Months</td>
+                    <td>from € 25</td>
+                </tr>
+                <tr>
+                    <td>12 Months</td>
+                    <td>from € 100</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="middle2-tab" class="tabcontent">
+        <h2>Team</h2>
 
         <div class="team-members">
             <button id="ceo">CEO / CTO<br><span>Eugene von Stein</span></button>
@@ -126,15 +141,6 @@
 
             <button id="leaddev">Senior Developer<br><span>Sten Alekssen</span></button>
         </div>
-    </div>
-    <div id="right-tab" class="tabcontent">
-        <div id="privacy">
-            Our VPN service is fully committed to protecting user data and maintaining user confidentiality:
-            no traffic, timestamp, DNS, bandwidth, or IP logging. Only user count, offline/online status
-            and subscription status are available to our administrators and support agents.
-        </div>
-    </div>
-    <div id="right2-tab" class="tabcontent">
         <h2>Information</h2>
         <ul class="not-list">
             <li><a href="https://euro-networks.odoo.com/">Crypto Euro Networks LLC</a>, est. 2023</li>
@@ -164,6 +170,13 @@
                 <br>(linked to Wiki article)
             </li>
         </ul>
+    </div>
+    <div id="right-tab" class="tabcontent">
+        <div id="privacy">
+            Our VPN service is fully committed to protecting user data and maintaining user confidentiality:
+            no traffic, timestamp, DNS, bandwidth, or IP logging. Only user count, offline/online status
+            and subscription status are available to our administrators and support agents.
+        </div>
     </div>
     <script>document.getElementById("defaultOpen").click();</script>
 </section>
