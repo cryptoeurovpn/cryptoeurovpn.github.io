@@ -1,0 +1,331 @@
+/*
+Modern Futuristic Glassmorphism Redesign
+Dark • Refined • Neon-Accented
+Single-file replacement
+*/
+
+@font-face {
+    font-family: "Karst";
+    font-weight: normal;
+    src: url("./fonts/Karst/Karst-Light.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Karst";
+    font-weight: bold;
+    src: url("./fonts/Karst/Karst-ExtraBold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Daz Handwriting";
+    src: url("./fonts/DazHandwriting/DazHandwritingRegular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Larabie";
+    src: url("./fonts/Larabie/LarabiefontRg-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Modestic Sans";
+    src: url("./fonts/ModesticSans/ModesticSans-Bold.woff2") format("woff2");
+}
+
+/* Root Palette */
+:root {
+    --bg-deep: #05080f;
+    --bg-mid: #0b1220;
+    --bg-accent: #160a1f;
+
+    --glass-bg: rgba(255,255,255,0.045);
+    --glass-border: rgba(255,255,255,0.1);
+
+    --text-main: #e6e9ef;
+    --text-muted: #aab0c0;
+
+    --accent-cyan: #3df5ff;
+    --accent-violet: #b56cff;
+    --accent-magenta: #ff4fd8;
+}
+
+* {
+    font-family: "Karst", sans-serif;
+    box-sizing: border-box;
+    transition: all 0.25s ease;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    scroll-behavior: smooth;
+    background:
+        radial-gradient(circle at 20% 20%, #1b2a4a 0%, transparent 60%),
+        radial-gradient(circle at 80% 80%, #2a1040 0%, transparent 55%),
+        linear-gradient(135deg, var(--bg-deep), var(--bg-mid));
+}
+
+body {
+    width: 100%;
+    max-width: 900px;
+    padding: 1rem;
+    color: var(--text-main);
+}
+
+/* Hide lower section */
+section.lower {
+    display: none !important;
+}
+
+/* Glass Panels */
+header,
+section,
+div.tabcontent {
+    backdrop-filter: blur(18px) saturate(170%);
+    background: var(--glass-bg);
+    border-radius: 20px;
+    box-shadow:
+        0 8px 30px rgba(0,0,0,0.35),
+        inset 0 0 0 1px var(--glass-border);
+}
+
+/* Header */
+header {
+    margin: 0.5rem auto 1rem;
+    padding: 0.8rem;
+    text-align: center;
+    font-family: "Modestic Sans", sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: transparent;
+    background: linear-gradient(
+        90deg,
+        var(--accent-cyan),
+        var(--accent-violet)
+    );
+    background-clip: text;
+}
+
+/* Sections */
+section {
+    margin-bottom: 1rem;
+}
+
+section.author {
+    padding: 1.5rem;
+}
+
+/* Tabs */
+.tablinks {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.tablink {
+    cursor: pointer;
+    padding: 0.8rem 1.2rem;
+    background: rgba(255,255,255,0.04);
+    color: var(--text-main);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 12px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+.tablink:hover,
+.tablink:focus {
+    background: linear-gradient(
+        90deg,
+        rgba(61,245,255,0.18),
+        rgba(181,108,255,0.18)
+    );
+    border-color: rgba(181,108,255,0.45);
+    box-shadow: 0 0 18px rgba(61,245,255,0.15);
+    transform: translateY(-2px);
+}
+
+/* Active tab (JS toggles this class only) */
+.tablink.active {
+    background: linear-gradient(
+        90deg,
+        var(--accent-cyan),
+        var(--accent-violet)
+    );
+    color: var(--bg-mid);
+    box-shadow:
+        0 0 18px rgba(61,245,255,0.35),
+        0 0 32px rgba(181,108,255,0.25);
+    transform: translateY(-1px);
+}
+
+
+/* Buttons */
+.button-17 {
+    background: linear-gradient(
+        135deg,
+        var(--accent-cyan),
+        var(--accent-violet)
+    );
+    color: var(--bg-mid);
+    border: none;
+    border-radius: 24px;
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.4),
+        0 0 20px rgba(61,245,255,0.25);
+}
+
+.button-17:hover {
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.6),
+        0 0 30px rgba(181,108,255,0.35);
+    transform: translateY(-2px);
+}
+
+/* Mission */
+.mission {
+    font-family: "Modestic Sans", sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin: 1.8rem auto;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* Values */
+.ulist {
+    display: flex;
+    justify-content: center;
+}
+
+.company-values-ulist-item {
+    font-family: "Modestic Sans", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: linear-gradient(
+        90deg,
+        var(--accent-cyan),
+        var(--accent-magenta)
+    );
+    background-clip: text;
+    color: transparent;
+}
+
+/* Tab Content */
+.tabcontent {
+    display: none;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+}
+
+/* Privacy */
+#privacy {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.not-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Team */
+.team-members button {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    color: var(--text-main);
+    font-size: 1.2rem;
+    padding: 0.8rem;
+}
+
+.team-members button:hover {
+    background: linear-gradient(
+        90deg,
+        rgba(61,245,255,0.12),
+        rgba(181,108,255,0.12)
+    );
+}
+
+span {
+    font-family: "Daz Handwriting", sans-serif;
+}
+
+/* Author */
+.author {
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-top: 3rem;
+}
+
+/* Links */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.85;
+}
+
+/* Prices Table */
+.prices-table {
+    margin: 40px auto;
+    width: 80%;
+    max-width: 600px;
+    border-collapse: collapse;
+    text-align: center;
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.04);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+}
+
+.prices-table thead {
+    background: linear-gradient(
+        90deg,
+        var(--accent-cyan),
+        var(--accent-violet)
+    );
+    color: #000;
+    font-size: 1.1rem;
+}
+
+.prices-table th,
+.prices-table td {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.prices-table tbody th {
+    font-weight: bold;
+}
+
+/* Miscellaneous */
+
+.bold-text {
+    font-weight: bold;
+}
+
+.muted-text {
+    color: var(--text-muted);
+}
