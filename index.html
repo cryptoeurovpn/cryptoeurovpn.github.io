@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Crypto Networks VPN">
+    <meta name="google-site-verification" content="xa3f2ZRd-6FQVwJEDOgG2lp2S8Az3QcqYAxQ2H0bs8w" />
+    <link rel="shortcut icon" href="./static/images/crypto_networks.jpg" />
+    <link rel="stylesheet" href="static/main_modern_refined.css">
+    <title>Crypto Networks VPN</title>
+</head>
+<body>
+<header>
+    <h1>Crypto Networks VPN</h1>
+</header>
+<section class="tablinks">
+    <script>
+        function openPage(pageName, elmnt) {
+            let i, tabcontent, tablinks;
+
+            // Hide all tab contents
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Remove active class from all tabs
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+
+            // Activate current tab
+            elmnt.classList.add("active");
+
+            // Show selected tab
+            document.getElementById(pageName).style.display = "inherit";
+        }
+
+    </script>
+    <button class="tablink" onclick="openPage('left-tab', this)" id="defaultOpen">About</button>
+    <button class="tablink" onclick="openPage('middle1-tab', this)">Pricing</button>
+    <button class="tablink" onclick="openPage('middle2-tab', this)">Company</button>
+    <button class="tablink" onclick="openPage('right-tab', this)">Privacy</button>
+</section>
+<section class="upper">
+    <div id="left-tab" class="tabcontent">
+        <a href="https://t.me/cryptonetworksbot">
+            <button class="button-17">
+                Subscribe via Telegram
+            </button>
+        </a>
+        <div>
+            <p>
+                We offer a VPN service that allows users to establish
+                an anonymous high-speed unlimited-bandwidth connection through
+                one of our servers in EU (the Netherlands) using the VLESS / Reality / XTLS VPN protocol.
+                The service's key feature is payments processing in crypto
+                (many popular options are available),
+                which is fully consistent with our mission:
+            </p>
+            <blockquote class="mission">
+                We strive to provide every Internet user
+                with complete freedom of information
+            </blockquote>
+
+            <p>In doing so, we are guided by the following values:</p>
+            <ul class="ulist not-list" id="company-values-ulist">
+
+                <li class="company-values-ulist-item">
+                    <a href="https://en.wikipedia.org/wiki/Privacy">Privacy</a>
+                </li>
+
+                <li class="company-values-ulist-item">
+                    <a href="https://en.wikipedia.org/wiki/Decentralized_finance">DeFi</a>
+                </li>
+
+                <li class="company-values-ulist-item">
+                    <a href="https://en.wikipedia.org/wiki/Anonymity">Anonymity</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <div id="middle1-tab" class="tabcontent">
+        <table class="prices-table">
+            <thead class="table-title">
+            Current price ranges (not final offer)
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Plan</th>
+                    <th>Range</th>
+                </tr>
+                <tr>
+                    <td>1 Month</td>
+                    <td>from € 12</td>
+                </tr>
+                <tr>
+                    <td>3 Months</td>
+                    <td>from € 25</td>
+                </tr>
+                <tr>
+                    <td>12 Months</td>
+                    <td>from € 100</td>
+                </tr>
+            </tbody>
+        </table>
+        You can also <a class="muted-text bold-text" href="mailto:the.real.lisa.von.trier@proton.me?subject=[Special%20Order]&body=Hi%20Lisa,%0A%0AI%20am%20interested%20in%20the%20following%20type%20of%20order:%0A">contact a manager</a> for special orders.
+    </div>
+    <div id="middle2-tab" class="tabcontent">
+        <h2>Team</h2>
+
+        <div class="team-members">
+            <button id="ceo">CEO / CTO<br><span>Eugene von Stein</span></button>
+
+            <button id="coo">COO<br><span>Lisa von Trier</span></button>
+
+            <button id="leaddev">Senior Developer<br><span>Sten Alekssen</span></button>
+        </div>
+        <h2>Information</h2>
+        <ul class="not-list">
+            <li><a href="https://euro-networks.odoo.com/">Crypto Euro Networks LLC</a>, est. 2023</li>
+            <li>the.real.lisa.von.trier@proton.me</li>
+        </ul>
+
+        <h2>Roadmap 2025-2026</h2>
+        <ul class="not-list">
+            <li><s>Team extension</s></li>
+            <li><s>Add USDT and other currencies processing</s></li>
+            <li>Add multiple protocols support</li>
+        </ul>
+
+        <h2>Abbreviations & definitions</h2>
+        <ul class="not-list">
+            <li>
+                <a href="https://en.wikipedia.org/wiki/Virtual_private_network">VPN — Virtual private network
+                </a>
+            </li>
+            <li>
+                <a href="https://en.wikipedia.org/wiki/European_Union">EU — European Union
+                </a>
+            </li>
+            <li>
+                <a href="https://en.wikipedia.org/wiki/Decentralized_finance">DeFi — Decentralized finance
+                </a>
+                <br>(linked to Wiki article)
+            </li>
+        </ul>
+    </div>
+    <div id="right-tab" class="tabcontent">
+        <div id="privacy">
+            Our VPN service is fully committed to protecting user data and maintaining user confidentiality:
+            no traffic, timestamp, DNS, bandwidth, or IP logging. Only user count, offline/online status
+            and subscription status are available to our administrators and support agents.
+        </div>
+    </div>
+    <script>document.getElementById("defaultOpen").click();</script>
+</section>
+<section class="lower">
+    <div class="advertisement">
+        SHARE WITH FRIENDS
+    </div>
+</section>
+
+<section class="author">
+    &copy; Crypto Networks VPN | 2023–2026
+</section>
+</body>
+</html>
