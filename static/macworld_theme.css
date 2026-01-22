@@ -1,0 +1,283 @@
+/*
+Macworld / Macintosh 1984 Inspired Theme
+Editorial • Print-first • No glass, no glow
+*/
+
+/* =========================
+   Fonts
+   ========================= */
+
+@font-face {
+    font-family: "ChiKareGo2";
+    src: url("./fonts/ChiKareGo2.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "New York";
+    src: url("./fonts/NewYork/NewYork.otf") format("otf");
+}
+
+@font-face {
+    font-family: "Karst";
+    font-weight: normal;
+    src: url("./fonts/Karst/Karst-Light.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Karst";
+    font-weight: bold;
+    src: url("./fonts/Karst/Karst-ExtraBold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Daz Handwriting";
+    src: url("./fonts/DazHandwriting/DazHandwritingRegular.woff2") format("woff2");
+}
+
+/* =========================
+   Core Palette
+   ========================= */
+
+:root {
+    --paper: #f6f4ef;
+    --ink: #111111;
+    --ink-muted: #555555;
+    --rule: #000000;
+    --highlight: #d8d8d8;
+    --mac-blue: #0a4cff;
+    --serif-font: "New York", serif;
+    --sans-serif-font: "Geneva", sans-serif;
+    --button-font: "ChiKareGo2", serif;
+}
+
+/* =========================
+   Global Reset
+   ========================= */
+
+* {
+    box-sizing: border-box;
+    transition: none;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: var(--paper);
+}
+
+body {
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 2rem 1.5rem;
+    font-family: var(--sans-serif-font);
+    color: var(--ink);
+    line-height: 1.6;
+}
+
+/* Hide lower section */
+section.lower {
+    display: none !important;
+}
+
+/* =========================
+   Page Furniture
+   ========================= */
+
+header {
+    font-family: var(--serif-font);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 1rem;
+    border: 2px solid var(--rule);
+    margin-bottom: 2rem;
+}
+
+/* =========================
+   Sections
+   ========================= */
+
+section,
+div.tabcontent {
+    border: 2px solid var(--rule);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background: var(--paper);
+}
+
+/* Section titles (if present) */
+.section-title {
+    font-family: var(--button-font);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-bottom: 2px solid var(--rule);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* =========================
+   Tabs (Mac OS 1.0 style)
+   ========================= */
+
+.tablinks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.tablink {
+    font-family: var(--button-font);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.6rem 1rem;
+    background: var(--paper);
+    border: 2px solid var(--rule);
+    color: var(--ink);
+    cursor: pointer;
+}
+
+.tablink:hover {
+    background: var(--highlight);
+}
+
+.tablink.active {
+    background: var(--ink);
+    color: var(--paper);
+}
+
+/* =========================
+   Buttons
+   ========================= */
+
+button,
+.button-17 {
+    font-family: var(--button-font);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: var(--paper);
+    border: 2px solid var(--rule);
+    padding: 0.6rem 1.4rem;
+    cursor: pointer;
+}
+
+button:hover,
+.button-17:hover {
+    background: var(--highlight);
+}
+
+/* =========================
+   Mission / Values
+   ========================= */
+
+.mission {
+    font-family: ver(--serif-font);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 1rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.ulist {
+    display: flex;
+    justify-content: center;
+}
+
+.company-values-ulist-item {
+    font-family: var(--button-font);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+/* =========================
+   Tab Content
+   ========================= */
+
+.tabcontent {
+    display: none;
+}
+
+/* =========================
+   Privacy / Text Blocks
+   ========================= */
+
+#privacy {
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.not-list {
+    list-style: none;
+    padding: 0;
+}
+
+.not-list li::before {
+    content: "• ";
+}
+
+/* =========================
+   Team
+   ========================= */
+
+.team-members button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+/* =========================
+   Tables (Spreadsheet-like)
+   ========================= */
+
+.prices-table {
+    margin: 3rem auto;
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    border: 2px solid var(--rule);
+    font-size: 0.95rem;
+}
+
+.prices-table th,
+.prices-table td {
+    border: 1px solid var(--rule);
+    padding: 0.6rem;
+    text-align: center;
+}
+
+.prices-table thead th {
+    font-family: var(--button-font);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: var(--highlight);
+}
+
+/* =========================
+   Links
+   ========================= */
+
+a {
+    color: var(--mac-blue);
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* =========================
+   Author / Signature
+   ========================= */
+
+.author {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--ink-muted);
+}
+
+.author span {
+    font-family: "Daz Handwriting", cursive;
+}
