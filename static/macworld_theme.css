@@ -157,6 +157,7 @@ button,
     font-family: var(--button-font);
     text-transform: uppercase;
     letter-spacing: 0.08em;
+    font-size: 1.2rem;
     background: var(--paper);
     border: 2px solid var(--rule);
     padding: 0.6rem 1.4rem;
@@ -216,6 +217,10 @@ button:hover,
 
 .not-list li::before {
     content: "• ";
+}
+
+.tabcontent h2 {
+    font-family: var(--serif-font);
 }
 
 /* =========================
